@@ -10,15 +10,18 @@ import android.widget.TextView;
  */
 
 
-public class CityViewHolder extends RecyclerView.ViewHolder implements CityRowView {
+public class CityViewHolder extends RecyclerView.ViewHolder implements CityRowView, View.OnClickListener {
 
     private TextView labelTextView;
     private ImageView cityImage;
+    private CityListPresenter presenter;
 
-    public CityViewHolder(View itemView) {
+    public CityViewHolder(View itemView, CityListPresenter presenter) {
         super(itemView);
         labelTextView = itemView.findViewById(R.id.city_label);
         cityImage = itemView.findViewById(R.id.city_image);
+        this.presenter = presenter;
+        itemView.setOnClickListener(this);
     }
 
     @Override
@@ -29,5 +32,13 @@ public class CityViewHolder extends RecyclerView.ViewHolder implements CityRowVi
     @Override
     public void setImage(int image) {
         cityImage.setImageResource(image);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (presenter != null) {
+            presenter.onItemInteraction(getAdapterPosition());
+        }
+
     }
 }

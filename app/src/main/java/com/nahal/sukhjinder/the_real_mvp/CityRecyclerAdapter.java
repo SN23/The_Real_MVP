@@ -11,22 +11,16 @@ import android.view.ViewGroup;
 public class CityRecyclerAdapter extends RecyclerView.Adapter<CityViewHolder> {
 
     private final CityListPresenter presenter;
-    private RecyclerItemClickListener recyclerItemClickListener;
 
 
     public CityRecyclerAdapter(CityListPresenter repositoriesPresenter) {
         this.presenter = repositoriesPresenter;
     }
 
-    public void setRecyclerItemClickListener(RecyclerItemClickListener recyclerItemClickListener) {
-        this.recyclerItemClickListener = recyclerItemClickListener;
-    }
-
-
     @Override
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new CityViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.city, parent, false));
+                .inflate(R.layout.city, parent, false), presenter);
     }
 
     @Override

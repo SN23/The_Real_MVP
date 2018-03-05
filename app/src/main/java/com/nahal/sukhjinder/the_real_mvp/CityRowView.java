@@ -9,4 +9,5 @@ public interface CityRowView {
     void setLabel(String title);
 
     void setImage(int image);
+
 }

@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">The_Real_MVP</string>
+    <string name="app_name">Travel Guide</string>
+
+    <!--Cities-->
+    <string name="new_york_city">New York City</string>
+    <string name="new_york_city_description">Situated on one of the world\'s largest natural harbors, New York City consists of five boroughs, each of which is a separate county of New York State. The five boroughs – Brooklyn, Queens, Manhattan, The Bronx, and Staten Island – were consolidated into a single city in 1898.</string>
+    <string name="statue_of_liberty_description">The Statue of Liberty is a world-famous symbol of freedom, given in the 1880s by France to the United States in celebration of friendship. Nearby Ellis Island was the first stop for millions of immigrants to the U.S. in the late 19th and early 20th centuries.</string>
+
+
+    <string name="boston">Boston</string>
+
+    <string name="chicago">Chicago</string>
+
+    <string name="dallas">Dallas</string>
+    <string name="honolulu">Honolulu</string>
+    <string name="las_vegas">Las Vegas</string>
+    <string name="los_angeles">Los Angeles</string>
+    <string name="miami">Miami</string>
+    <string name="seattle">Seattle</string>
+    <string name="washington_dc">Washington D.C.</string>
+
+
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
 </resources>

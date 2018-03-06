@@ -1,5 +1,6 @@
 package com.nahal.sukhjinder.the_real_mvp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -9,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     CityListPresenter cityListPresenter;
+    static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         cityListPresenter.loadCities();
 
         initRecyclerView();
+        context = getApplicationContext();
     }
 
     private void initRecyclerView() {

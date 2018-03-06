@@ -39,6 +39,5 @@ public class CityViewHolder extends RecyclerView.ViewHolder implements CityRowVi
         if (presenter != null) {
             presenter.onItemInteraction(getAdapterPosition());
         }
-
     }
 }

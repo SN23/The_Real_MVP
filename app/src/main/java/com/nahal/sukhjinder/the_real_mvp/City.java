@@ -10,13 +10,19 @@ import android.os.Parcelable;
 public class City implements Parcelable {
 
     private String cityName;
-    private String funFact;
-    private String sites;
     private int cityImage;
+    private String description;
+    private Site site;
+    private Weather weather;
+    private Restaurant restaurant;
 
-    public City(String cityName, int cityImage) {
+    public City(String cityName, int cityImage, String description, Site site, Weather weather, Restaurant restaurant) {
         this.cityName = cityName;
         this.cityImage = cityImage;
+        this.description = description;
+        this.site = site;
+        this.weather = weather;
+        this.restaurant = restaurant;
     }
 
     public String getCityName() {
@@ -27,22 +33,6 @@ public class City implements Parcelable {
         this.cityName = cityName;
     }
 
-    public String getFunFact() {
-        return funFact;
-    }
-
-    public void setFunFact(String funFact) {
-        this.funFact = funFact;
-    }
-
-    public String getSites() {
-        return sites;
-    }
-
-    public void setSites(String sites) {
-        this.sites = sites;
-    }
-
     public int getCityImage() {
         return cityImage;
     }
@@ -51,11 +41,45 @@ public class City implements Parcelable {
         this.cityImage = cityImage;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Site getSite() {
+        return site;
+    }
+
+    public void setSite(Site site) {
+        this.site = site;
+    }
+
+    public Weather getWeather() {
+        return weather;
+    }
+
+    public void setWeather(Weather weather) {
+        this.weather = weather;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
     protected City(Parcel in) {
         cityName = in.readString();
-        funFact = in.readString();
-        sites = in.readString();
         cityImage = in.readInt();
+        description = in.readString();
+        site = (Site) in.readValue(Site.class.getClassLoader());
+        weather = (Weather) in.readValue(Weather.class.getClassLoader());
+        restaurant = (Restaurant) in.readValue(Restaurant.class.getClassLoader());
     }
 
     @Override
@@ -66,9 +90,11 @@ public class City implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(cityName);
-        dest.writeString(funFact);
-        dest.writeString(sites);
         dest.writeInt(cityImage);
+        dest.writeString(description);
+        dest.writeValue(site);
+        dest.writeValue(weather);
+        dest.writeValue(restaurant);
     }
 
     @SuppressWarnings("unused")

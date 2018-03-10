@@ -1,34 +1,41 @@
 package com.nahal.sukhjinder.the_real_mvp;
 
-import android.content.Context;
+import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+import com.nahal.sukhjinder.the_real_mvp.databinding.ActivityMainBinding;
+
+import java.util.List;
 
 
-    CityListPresenter cityListPresenter;
-    static Context context;
+public class MainActivity extends AppCompatActivity implements CityRecyclerAdapter.OnUserClickListener {
+
+
+    private CityListPresenter cityListPresenter;
+    private ActivityMainBinding binding;
+    private CityRecyclerAdapter cityRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         cityListPresenter = new CityListPresenter();
-        cityListPresenter.loadCities();
-
-        initRecyclerView();
-        context = getApplicationContext();
+        initRecyclerView(cityListPresenter.loadCities());
     }
 
-    private void initRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.image_recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        CityRecyclerAdapter cityRecyclerAdapter = new CityRecyclerAdapter(cityListPresenter);
-        recyclerView.setAdapter(cityRecyclerAdapter);
+    private void initRecyclerView(List<City> cities) {
+        binding.imageRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        cityRecyclerAdapter = new CityRecyclerAdapter(cities, this);
+        binding.imageRecyclerView.setAdapter(cityRecyclerAdapter);
     }
 
+    public void onUserClicked(City city) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("City", city);
+        startActivity(intent);
+    }
 }

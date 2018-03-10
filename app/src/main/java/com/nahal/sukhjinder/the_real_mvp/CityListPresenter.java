@@ -1,8 +1,5 @@
 package com.nahal.sukhjinder.the_real_mvp;
 
-import android.content.Intent;
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +20,7 @@ public class CityListPresenter {
     String defaultDescription = "Lorem ipsum dolor sit amet, dicat virtute quo no. Et per zril delicata. Simul vulputate in his. Ex ius dicam eloquentiam, usu te nostrud fabulas recusabo, luptatum instructior ea vis. Nec albucius sententiae ea, quo vide appetere invenire id. Nec soleat verear vocibus eu, et est ludus comprehensam.";
 
 
-    public void loadCities() {
+    public List<City> loadCities() {
         City newYorkCity = new City("New York City", R.drawable.new_york_city, newYorkCityDescription, newYorkCitySite, weather, newYorkCityRestaurant);
 
 //      Reused details from new york city to simplify
@@ -47,25 +44,8 @@ public class CityListPresenter {
         cities.add(losAngeles);
         cities.add(seattle);
         cities.add(washington_dc);
+
+        return cities;
     }
-
-    public void onBindCityRowViewAtPosition(int position, CityRowView rowView) {
-        City city = cities.get(position);
-        rowView.setImage(city.getCityImage());
-        rowView.setLabel(city.getCityName());
-    }
-
-    public int getCitiesRowsCount() {
-        return cities.size();
-    }
-
-
-    public void onItemInteraction(int position) {
-        City city = cities.get(position);
-        Log.d("City", city.getCityName());
-        Intent intent = new Intent(MainActivity.context, DetailActivity.class);
-        intent.putExtra("City", city);
-        MainActivity.context.startActivity(intent);
-    }
-
+    
 }

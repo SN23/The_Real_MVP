@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.nahal.sukhjinder.the_real_mvp.MainActivity">
+        tools:context="com.nahal.sukhjinder.the_real_mvp.activities.MainActivity">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/image_recycler_view"

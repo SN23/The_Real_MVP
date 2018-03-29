@@ -1,4 +1,11 @@
-package com.nahal.sukhjinder.the_real_mvp;
+package com.nahal.sukhjinder.the_real_mvp.presenters;
+
+import com.nahal.sukhjinder.the_real_mvp.R;
+import com.nahal.sukhjinder.the_real_mvp.interfaces.CityListView;
+import com.nahal.sukhjinder.the_real_mvp.model.City;
+import com.nahal.sukhjinder.the_real_mvp.model.Restaurant;
+import com.nahal.sukhjinder.the_real_mvp.model.Site;
+import com.nahal.sukhjinder.the_real_mvp.model.Weather;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +14,7 @@ import java.util.List;
  * Created by Sukhjinder on 3/4/18.
  */
 
-public class CityListPresenter {
+public class CityListPresenter implements CityListView {
 
     private List<City> cities = new ArrayList<>();
 
@@ -15,11 +22,9 @@ public class CityListPresenter {
     Site newYorkCitySite = new Site("Statue Of Liberty", R.drawable.statue_of_liberty, "The Statue of Liberty is a world-famous symbol of freedom, given in the 1880s by France to the United States in celebration of friendship. Nearby Ellis Island was the first stop for millions of immigrants to the U.S. in the late 19th and early 20th centuries.");
     Weather weather = new Weather("40 F", "20%", "Clear Sky", "4 Mph", R.drawable.art_clear);
     Restaurant newYorkCityRestaurant = new Restaurant("Grimaldi's", "Grimaldi's Pizzeria is one of the most popular pizzerias in New York City. In recent years, Zagat Survey rated Grimaldi's No. 1 Pizzeria in New York.", R.drawable.grimaldis);
-
-
     String defaultDescription = "Lorem ipsum dolor sit amet, dicat virtute quo no. Et per zril delicata. Simul vulputate in his. Ex ius dicam eloquentiam, usu te nostrud fabulas recusabo, luptatum instructior ea vis. Nec albucius sententiae ea, quo vide appetere invenire id. Nec soleat verear vocibus eu, et est ludus comprehensam.";
 
-
+    @Override
     public List<City> loadCities() {
         City newYorkCity = new City("New York City", R.drawable.new_york_city, newYorkCityDescription, newYorkCitySite, weather, newYorkCityRestaurant);
 
@@ -47,5 +52,5 @@ public class CityListPresenter {
 
         return cities;
     }
-    
+
 }

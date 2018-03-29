@@ -1,4 +1,4 @@
-# The_Real_MVP
+# Travel-Guide
 A Travel guide App created for a hackathon
 
 - Implements the MVP design pattern

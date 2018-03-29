@@ -1,4 +1,4 @@
-package com.nahal.sukhjinder.the_real_mvp;
+package com.nahal.sukhjinder.the_real_mvp.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

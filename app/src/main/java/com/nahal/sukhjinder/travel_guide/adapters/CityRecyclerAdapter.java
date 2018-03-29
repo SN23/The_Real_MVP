@@ -1,4 +1,4 @@
-package com.nahal.sukhjinder.the_real_mvp.adapters;
+package com.nahal.sukhjinder.travel_guide.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nahal.sukhjinder.the_real_mvp.R;
-import com.nahal.sukhjinder.the_real_mvp.model.City;
+import com.nahal.sukhjinder.travel_guide.R;
+import com.nahal.sukhjinder.travel_guide.model.City;
 
 import java.util.List;
 

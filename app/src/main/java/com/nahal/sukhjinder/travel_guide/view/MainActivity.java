@@ -1,4 +1,4 @@
-package com.nahal.sukhjinder.the_real_mvp.view;
+package com.nahal.sukhjinder.travel_guide.view;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 
-import com.nahal.sukhjinder.the_real_mvp.contract.MainActivityContract;
-import com.nahal.sukhjinder.the_real_mvp.presenter.MainPresenter;
-import com.nahal.sukhjinder.the_real_mvp.adapters.CityRecyclerAdapter;
-import com.nahal.sukhjinder.the_real_mvp.R;
-import com.nahal.sukhjinder.the_real_mvp.databinding.ActivityMainBinding;
-import com.nahal.sukhjinder.the_real_mvp.model.City;
+import com.nahal.sukhjinder.travel_guide.contract.MainActivityContract;
+import com.nahal.sukhjinder.travel_guide.presenter.MainPresenter;
+import com.nahal.sukhjinder.travel_guide.adapters.CityRecyclerAdapter;
+import com.nahal.sukhjinder.travel_guide.R;
+import com.nahal.sukhjinder.travel_guide.databinding.ActivityMainBinding;
+import com.nahal.sukhjinder.travel_guide.model.City;
 
 import java.util.List;
 

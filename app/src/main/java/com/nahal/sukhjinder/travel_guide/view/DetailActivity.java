@@ -1,17 +1,17 @@
-package com.nahal.sukhjinder.the_real_mvp.view;
+package com.nahal.sukhjinder.travel_guide.view;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.nahal.sukhjinder.the_real_mvp.contract.DetailActivityContract;
-import com.nahal.sukhjinder.the_real_mvp.R;
-import com.nahal.sukhjinder.the_real_mvp.databinding.CityDetailBinding;
-import com.nahal.sukhjinder.the_real_mvp.model.City;
-import com.nahal.sukhjinder.the_real_mvp.model.Restaurant;
-import com.nahal.sukhjinder.the_real_mvp.model.Site;
-import com.nahal.sukhjinder.the_real_mvp.model.Weather;
+import com.nahal.sukhjinder.travel_guide.contract.DetailActivityContract;
+import com.nahal.sukhjinder.travel_guide.R;
+import com.nahal.sukhjinder.travel_guide.databinding.CityDetailBinding;
+import com.nahal.sukhjinder.travel_guide.model.City;
+import com.nahal.sukhjinder.travel_guide.model.Restaurant;
+import com.nahal.sukhjinder.travel_guide.model.Site;
+import com.nahal.sukhjinder.travel_guide.model.Weather;
 
 /**
  * Displays the details about the selected city including a short description, weather,

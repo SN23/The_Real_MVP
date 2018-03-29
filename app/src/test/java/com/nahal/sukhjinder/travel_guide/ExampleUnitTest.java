@@ -1,4 +1,4 @@
-package com.nahal.sukhjinder.the_real_mvp;
+package com.nahal.sukhjinder.travel_guide;
 
 import org.junit.Test;
 

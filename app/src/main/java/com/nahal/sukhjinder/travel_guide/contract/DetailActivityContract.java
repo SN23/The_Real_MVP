@@ -1,9 +1,9 @@
-package com.nahal.sukhjinder.the_real_mvp.contract;
+package com.nahal.sukhjinder.travel_guide.contract;
 
-import com.nahal.sukhjinder.the_real_mvp.model.City;
-import com.nahal.sukhjinder.the_real_mvp.model.Restaurant;
-import com.nahal.sukhjinder.the_real_mvp.model.Site;
-import com.nahal.sukhjinder.the_real_mvp.model.Weather;
+import com.nahal.sukhjinder.travel_guide.model.City;
+import com.nahal.sukhjinder.travel_guide.model.Restaurant;
+import com.nahal.sukhjinder.travel_guide.model.Site;
+import com.nahal.sukhjinder.travel_guide.model.Weather;
 
 /**
  * Created by Sukhjinder on 3/5/18.

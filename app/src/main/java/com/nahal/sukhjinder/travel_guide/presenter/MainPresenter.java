@@ -1,11 +1,11 @@
-package com.nahal.sukhjinder.the_real_mvp.presenter;
+package com.nahal.sukhjinder.travel_guide.presenter;
 
-import com.nahal.sukhjinder.the_real_mvp.R;
-import com.nahal.sukhjinder.the_real_mvp.contract.MainActivityContract;
-import com.nahal.sukhjinder.the_real_mvp.model.City;
-import com.nahal.sukhjinder.the_real_mvp.model.Restaurant;
-import com.nahal.sukhjinder.the_real_mvp.model.Site;
-import com.nahal.sukhjinder.the_real_mvp.model.Weather;
+import com.nahal.sukhjinder.travel_guide.R;
+import com.nahal.sukhjinder.travel_guide.contract.MainActivityContract;
+import com.nahal.sukhjinder.travel_guide.model.City;
+import com.nahal.sukhjinder.travel_guide.model.Restaurant;
+import com.nahal.sukhjinder.travel_guide.model.Site;
+import com.nahal.sukhjinder.travel_guide.model.Weather;
 
 import java.util.ArrayList;
 import java.util.List;

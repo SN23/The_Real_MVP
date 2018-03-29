@@ -1,11 +1,11 @@
-package com.nahal.sukhjinder.the_real_mvp.activities;
+package com.nahal.sukhjinder.the_real_mvp.view;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.nahal.sukhjinder.the_real_mvp.interfaces.DetailView;
+import com.nahal.sukhjinder.the_real_mvp.contract.DetailActivityContract;
 import com.nahal.sukhjinder.the_real_mvp.R;
 import com.nahal.sukhjinder.the_real_mvp.databinding.CityDetailBinding;
 import com.nahal.sukhjinder.the_real_mvp.model.City;
@@ -14,10 +14,11 @@ import com.nahal.sukhjinder.the_real_mvp.model.Site;
 import com.nahal.sukhjinder.the_real_mvp.model.Weather;
 
 /**
- * Created by Sukhjinder on 3/5/18.
+ * Displays the details about the selected city including a short description, weather,
+ * restaurants, and sites for visitors to see
  */
 
-public class DetailActivity extends AppCompatActivity implements DetailView {
+public class DetailActivity extends AppCompatActivity implements DetailActivityContract.View {
 
     private Intent intent;
     private City city;

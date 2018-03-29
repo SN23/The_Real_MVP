@@ -1,7 +1,7 @@
-package com.nahal.sukhjinder.the_real_mvp.presenters;
+package com.nahal.sukhjinder.the_real_mvp.presenter;
 
 import com.nahal.sukhjinder.the_real_mvp.R;
-import com.nahal.sukhjinder.the_real_mvp.interfaces.CityListView;
+import com.nahal.sukhjinder.the_real_mvp.contract.MainActivityContract;
 import com.nahal.sukhjinder.the_real_mvp.model.City;
 import com.nahal.sukhjinder.the_real_mvp.model.Restaurant;
 import com.nahal.sukhjinder.the_real_mvp.model.Site;
@@ -11,12 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Sukhjinder on 3/4/18.
+ * Responsible for handling actions from the view and updating the UI
  */
 
-public class CityListPresenter implements CityListView {
+public class MainPresenter implements MainActivityContract.Presenter {
 
+    private MainActivityContract.View mView;
     private List<City> cities = new ArrayList<>();
+
+    public MainPresenter(MainActivityContract.View view) {
+        mView = view;
+    }
 
     String newYorkCityDescription = "Situated on one of the world's largest natural harbors, New York City consists of five boroughs, each of which is a separate county of New York State. The five boroughs – Brooklyn, Queens, Manhattan, The Bronx, and Staten Island – were consolidated into a single city in 1898.";
     Site newYorkCitySite = new Site("Statue Of Liberty", R.drawable.statue_of_liberty, "The Statue of Liberty is a world-famous symbol of freedom, given in the 1880s by France to the United States in celebration of friendship. Nearby Ellis Island was the first stop for millions of immigrants to the U.S. in the late 19th and early 20th centuries.");

@@ -21,22 +21,20 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements MainActivityContract.View, CityRecyclerAdapter.OnUserClickListener {
 
 
-    private MainPresenter mainPresenter;
     private ActivityMainBinding binding;
-    private CityRecyclerAdapter cityRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        mainPresenter = new MainPresenter(this);
+        MainPresenter mainPresenter = new MainPresenter(this);
         initRecyclerView(mainPresenter.loadCities());
     }
 
     public void initRecyclerView(List<City> cities) {
         binding.imageRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        cityRecyclerAdapter = new CityRecyclerAdapter(cities, this);
+        CityRecyclerAdapter cityRecyclerAdapter = new CityRecyclerAdapter(cities, this);
         binding.imageRecyclerView.setAdapter(cityRecyclerAdapter);
     }
 

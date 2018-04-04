@@ -13,6 +13,7 @@ public class Weather implements Parcelable {
     private String humidity;
     private String description;
     private String windSpeed;
+    private int weatherIcon;
 
     public Weather(String temperature, String humidity, String description, String windSpeed, int weatherIcon) {
         this.temperature = temperature;
@@ -63,7 +64,6 @@ public class Weather implements Parcelable {
         this.weatherIcon = weatherIcon;
     }
 
-    private int weatherIcon;
 
     protected Weather(Parcel in) {
         temperature = in.readString();

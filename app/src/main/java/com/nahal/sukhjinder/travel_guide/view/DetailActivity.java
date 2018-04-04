@@ -20,8 +20,6 @@ import com.nahal.sukhjinder.travel_guide.model.Weather;
 
 public class DetailActivity extends AppCompatActivity implements DetailActivityContract.View {
 
-    private Intent intent;
-    private City city;
     private CityDetailBinding binding;
 
     @Override
@@ -29,8 +27,8 @@ public class DetailActivity extends AppCompatActivity implements DetailActivityC
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.city_detail);
 
-        intent = getIntent();
-        city = intent.getParcelableExtra("City");
+        Intent intent = getIntent();
+        City city = intent.getParcelableExtra("City");
         Weather weather = city.getWeather();
         Site site = city.getSite();
         Restaurant restaurant = city.getRestaurant();
